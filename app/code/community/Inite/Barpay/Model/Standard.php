@@ -5,7 +5,7 @@
  * This file is subject to the terms and conditions defined in
  * file 'LICENSE.txt', which is part of this source code package.
  *
- * @VERSION Barpay 0.1.2
+ * @VERSION Barpay 0.1.5
  *
 **/
 
@@ -214,7 +214,7 @@ class Inite_Barpay_Model_Standard extends Mage_Payment_Model_Method_Abstract
 		$tracebi = $order->getId();
 		$billdat = Mage::getModel('core/date')->date('d-m-Y', strtotime(now()));
 		$bicphone = $address->getData('telephone');
-		$bicemail = $obj->is_sandbox_mode ? 'installation@ezv-gmbh.de' : $customer->getData('email');
+		$bicemail = $config->is_sandbox_mode ? 'installation@ezv-gmbh.de' : $customer->getData('email');
 		if(!$config->file_save_enabled){
 			$bicemail = 'URL#'.$bicemail;
 		}

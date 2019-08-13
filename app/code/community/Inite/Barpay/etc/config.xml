@@ -2,7 +2,7 @@
 <config>
 <modules>
 <Inite_Barpay>
-<version>0.1.2</version>
+<version>0.1.9</version>
 </Inite_Barpay>
 </modules>
  
@@ -132,7 +132,7 @@
 			<model>barpay/standard</model>
 			<active>0</active>
 			<order_status>pending</order_status>
-			<title>Barpay (0.1.2)</title>
+			<title>Barpay (0.1.9)</title>
                 <comment>
                 <![CDATA[This text appears just beneath the field with a small arrow. 
                 <span class="notice">It can contain HTML formatting too!</span>]]>

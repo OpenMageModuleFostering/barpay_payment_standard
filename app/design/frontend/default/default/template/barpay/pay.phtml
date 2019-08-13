@@ -10,10 +10,8 @@
 **/
 
 ?>
-<?php if($this->canDownloadPdf()): ?>
-	<h2>Instructions</h2>
+<h2>Instructions</h2>
 
-	<br/>
+<br/>
 
-	<a href="<?php echo $this->getPdfUrl(); ?>"><?php echo $this->__('Download Barpay voucher'); ?></a>
-<?php endif; ?>
+<a href="<?php $this->getPdfUrl(); ?>"><?php $this->__('Download Barpay voucher'); ?></a>
