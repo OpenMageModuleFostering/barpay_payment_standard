@@ -1,0 +1,19 @@
+﻿<?php
+
+/**
+ * 
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ *
+ * @VERSION Barpay 0.1.2
+ *
+**/
+
+?>
+<fieldset class="form-list">
+    <ul id="payment_form_<?php echo $this->getMethodCode(); ?>" style="display:none">
+        <li>Sicher, schnell und ohne Gebühren mit BarPay online bar bezahlen.<a onclick="javascript:window.open('<?php echo $this->__('http://www.barpay.de/info/') ?>','kundeninformationen','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=580, height=550');return false;" href="#" title="Hier klicken - sofortüberweisung Kundeninformationen"><img src="<?php echo $this->__('https://www.badmoebeldirekt.de/barpay.gif') ?>" alt="Hier klicken - Barpay Kundeninformationen" border="0" /></a>
+
+        </li>
+    </ul>
+</fieldset>

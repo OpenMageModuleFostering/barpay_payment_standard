@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Inite_Barpay>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Payment/>
+            </depends>
+        </Inite_Barpay>
+    </modules>
+</config>

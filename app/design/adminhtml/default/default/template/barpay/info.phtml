@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * 
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ *
+ * @VERSION Barpay 0.1.2
+ *
+**/
+
+?>
+<p>
+	Barpay
+	<?php if($this->canDownloadPdf()): ?>
+		<br/>
+		<a href="<?php echo $this->getPdfUrl(); ?>"><?php echo $this->__('Download Barpay voucher'); ?></a>
+	<?php endif; ?>
+	<?php if($this->canRepay()): ?>
+		<br/>
+		<a href="<?php echo $this->getRepayUrl(); ?>"><?php echo $this->__('Initialize payment process'); ?></a>
+	<?php endif; ?>
+</p>

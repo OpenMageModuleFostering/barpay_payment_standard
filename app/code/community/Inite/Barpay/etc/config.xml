@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<modules>
+<Inite_Barpay>
+<version>0.1.2</version>
+</Inite_Barpay>
+</modules>
+ 
+  <default>
+        <payment>
+            <barpay>
+				<sandbox>0</sandbox>
+				<merchant_id>003000100010001000066</merchant_id>
+				<merchant_pwd>b4p4yt3st1n4g</merchant_pwd>
+                <preshared_key>49735a24765967ccd770d3a0593053534a22674d1d277644f353fcd8e4</preshared_key>
+                <product_id>4260284350017</product_id>
+				<submit_url>https://livebi.barpay-system.de/BarPayGateWay/BarPayIssue.php?wsdl</submit_url>
+				<save_enabled>0</save_enabled>
+				<show_logo>0</show_logo>
+				<valid_days>30</valid_days>
+            </barpay>
+        </payment>
+   </default>
+ 
+ <frontend>
+<routers>
+<barpay>
+<use>standard</use>
+<args>
+<module>Inite_Barpay</module>
+<frontName>barpay</frontName>
+</args>
+</barpay>
+</routers>
+
+       <layout>
+            <updates>
+                <barpay>
+                    <file>barpay.xml</file>
+                </barpay>
+            </updates>
+        </layout>
+</frontend>
+ 
+<global>
+
+<sales>
+	<order>
+		<statuses>
+			<pending_barpay translate="label"><label>Pending Barpay</label></pending_barpay>
+		</statuses>
+		<states>
+			<pending_barpay>
+				<statuses>
+					<pending_barpay />
+				</statuses>
+				<visible_on_front/>
+			</pending_barpay>
+		</states>
+	</order>
+</sales>
+
+<models>
+<barpay>
+<class>Inite_Barpay_Model</class>
+</barpay>
+			<sales>
+              <rewrite>
+                  <order>Inite_Barpay_Model_Sales_Order</order>
+              </rewrite>
+			</sales>
+			<core>
+			  <rewrite>
+				<email_template_mailer>Inite_Barpay_Model_Email_Template_Mailer</email_template_mailer>
+				<email_template>Inite_Barpay_Model_Email_Template</email_template>
+			  </rewrite>
+			</core>
+</models>
+
+<helpers>
+<barpay>
+<class>Inite_Barpay_Helper</class>
+</barpay>
+</helpers>
+
+<blocks>
+<barpay>
+<class>Inite_Barpay_Block</class>
+</barpay>
+
+</blocks>
+ 
+        <resources>
+            <barpay_setup>
+                <setup>
+                    <module>Inite_Barpay</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </barpay_setup>
+			
+            <barpay_write>
+                <connection>
+                  <use>core_write</use>
+                </connection>
+            </barpay_write>
+            <barpay_read>
+               <connection>
+                <use>core_read</use>
+              </connection>
+            </barpay_read>
+        </resources>
+
+</global>
+    
+<admin>
+	<routers>
+		<barpayadmin>
+			<use>admin</use>
+			<args>
+				<module>Inite_Barpay</module>
+				<frontName>barpayadmin</frontName>
+			</args>
+		</barpayadmin>
+	</routers>
+</admin>
+	
+<default>
+	<payment>
+		<barpay>
+			<model>barpay/standard</model>
+			<active>0</active>
+			<order_status>pending</order_status>
+			<title>Barpay (0.1.2)</title>
+                <comment>
+                <![CDATA[This text appears just beneath the field with a small arrow. 
+                <span class="notice">It can contain HTML formatting too!</span>]]>
+              </comment>
+			<submit_url>https://livebi.barpay-system.de/BarPayGateWay/BarPayIssue.php?wsdl</submit_url>
+			<allowspecific>0</allowspecific>
+			<sort_order>100</sort_order>
+		</barpay>
+	</payment>
+</default>
+ 
+
+
+</config>

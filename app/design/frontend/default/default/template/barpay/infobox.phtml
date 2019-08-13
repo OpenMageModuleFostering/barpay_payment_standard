@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * 
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ *
+ * @VERSION Barpay 0.1.2
+ *
+**/
+
+?>
+<?php if(Mage::getStoreConfig('payment/barpay/active')):?>
+
+<div class="block">
+<div class="block-title">
+<strong>
+<span>
+Neue Zahlungsart
+</span>
+</strong>
+</div>
+    <div class="block-content" style="margin : 1em;background-color:#FFFFFF;">
+
+<br>
+		<a onclick="javascript:window.open('<?php echo $this->__('http://www.barpay.de/info/') ?>','kundeninformationen','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=580, height=550');return false;" href="#" title="Hier klicken - Informationen zu Barpay"><img src="<?php echo $this->getSkinUrl('images/barpay/barpay_callout.gif') ?>" alt="Hier klicken - Barpay Kundeninformationen" border="0" /></a>
+
+    </div>
+</div>
+
+
+<?php endif; ?>
