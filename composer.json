@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/Barpay_Payment_Standard",
+    "name": "openmage-module-fostering\/barpay_payment_standard",
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
