@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Barpay_Payment_Standard",
+    "name": "OpenMageModuleFostering\/Barpay_Payment_Standard",
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
     "description": "Secure, quick and without any fees: Pay online in cash with BarPay.",
     "authors": [
-    {
-        "name": "Christian Lakits",
-        "email": "barpay@munichx-media.de"
-    }
-],
+        {
+            "name": "Christian Lakits",
+            "email": "barpay@munichx-media.de"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
